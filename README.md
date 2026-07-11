@@ -9,30 +9,29 @@ The pipeline ensures data quality and accurately tracks historical changes to us
 ```mermaid
 graph LR
     subgraph Orchestration
-        A[Apache Airflow<br>(Dockerized)] 
+        A["Apache Airflow<br>(Dockerized)"] 
     end
     
     subgraph Transformation
-        B[dbt Core<br>(Virtual Env)]
+        B["dbt Core<br>(Virtual Env)"]
     end
     
     subgraph Google Cloud Platform
-        C[(Raw Source Data)] --> D[(BigQuery<br>Data Warehouse)]
-        B -->|Executes SCD Type 2 & Tests| D
+        C[("Raw Source Data")] --> D[("BigQuery<br>Data Warehouse")]
+        B -->|"Executes SCD Type 2 & Tests"| D
     end
     
     subgraph Visualization
-        E[Looker Studio<br>Dashboard]
+        E["Looker Studio<br>Dashboard"]
     end
 
-    A -.->|Triggers pipeline| B
-    D -->|Serves Clean Data| E
+    A -.->|"Triggers pipeline"| B
+    D -->|"Serves Clean Data"| E
 
     style A fill:#fff1ed,stroke:#e43921,stroke-width:2px
     style B fill:#f4f5f6,stroke:#ff694b,stroke-width:2px
     style D fill:#e8f0fe,stroke:#4285f4,stroke-width:2px
     style E fill:#e8f0fe,stroke:#4285f4,stroke-width:2px
-    ```
 
 1. **Orchestration:** Dockerized Apache Airflow schedules and triggers the pipeline.
 2. **Transformation:** dbt executes SQL models to clean, transform, and snapshot the raw data.
