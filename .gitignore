@@ -1,0 +1,10 @@
+# Cloud Keys and Secrets
+gcp_key.json
+.env
+
+# Python Virtual Environments
+dbt_venv/
+__pycache__/
+
+# Airflow Logs
+logs/

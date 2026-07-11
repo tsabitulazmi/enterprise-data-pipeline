@@ -1,0 +1,11 @@
+subscription_dw:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: gcp-first-project-493504
+      dataset: dbt_subscription
+      threads: 4
+      keyfile: /opt/airflow/dags/subscription_dw/gcp_key.json
+      location: US
