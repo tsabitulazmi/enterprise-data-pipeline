@@ -6,6 +6,7 @@ This project is an automated, production-ready data pipeline that transforms and
 The pipeline ensures data quality and accurately tracks historical changes to user subscriptions over time using **Slowly Changing Dimensions (SCD Type 2)**. The final data is visualized in **Looker Studio** to provide actionable business intelligence.
 
 ## Architecture
+```mermaid
 graph LR
     subgraph Orchestration
         A[Apache Airflow<br>(Dockerized)] 
@@ -31,6 +32,7 @@ graph LR
     style B fill:#f4f5f6,stroke:#ff694b,stroke-width:2px
     style D fill:#e8f0fe,stroke:#4285f4,stroke-width:2px
     style E fill:#e8f0fe,stroke:#4285f4,stroke-width:2px
+    ```
 
 1. **Orchestration:** Dockerized Apache Airflow schedules and triggers the pipeline.
 2. **Transformation:** dbt executes SQL models to clean, transform, and snapshot the raw data.
