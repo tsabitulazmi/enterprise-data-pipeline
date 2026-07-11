@@ -5,7 +5,7 @@ This project is an automated, production-ready data pipeline that transforms and
 
 The pipeline ensures data quality and accurately tracks historical changes to user subscriptions over time using **Slowly Changing Dimensions (SCD Type 2)**. The final data is visualized in **Looker Studio** to provide actionable business intelligence.
 
-## Architecture
+## 🏗️ Architecture
 
 ```mermaid
 graph LR
