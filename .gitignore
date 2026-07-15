@@ -1,10 +1,17 @@
-# Cloud Keys and Secrets
+# GCP & Security Credentials
+*.json
 gcp_key.json
-.env
+secrets/
 
-# Python Virtual Environments
-dbt_venv/
-__pycache__/
+# dbt Root Artifacts & Cache
+dbt_project/target/
+dbt_project/dbt_packages/
+dbt_project/logs/
 
-# Airflow Logs
+# Airflow Logs & Environment
 logs/
+plugins/
+*.pyc
+__pycache__/
+.DS_Store
+.env
