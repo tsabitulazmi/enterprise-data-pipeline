@@ -3,7 +3,7 @@
 {{
     config(
       target_schema='dbt_subscription',
-      unique_key='id',
+      unique_key='user_id',
       strategy='timestamp',
       updated_at='updated_at',
     )

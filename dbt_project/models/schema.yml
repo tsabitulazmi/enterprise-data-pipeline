@@ -15,4 +15,4 @@ seeds:
         data_tests:
           - accepted_values:
               arguments:
-                values: ['active', 'expired', 'cancelled']
+                values: ['active', 'expired', 'cancelled', 'upgraded']

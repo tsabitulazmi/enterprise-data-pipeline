@@ -1,4 +1,4 @@
-subscription_dw:
+dbt_project:
   target: dev
   outputs:
     dev:
@@ -7,5 +7,5 @@ subscription_dw:
       project: gcp-first-project-493504
       dataset: dbt_subscription
       threads: 4
-      keyfile: /opt/airflow/dags/subscription_dw/gcp_key.json
+      keyfile: /opt/airflow/dbt_project/gcp_key.json
       location: US
