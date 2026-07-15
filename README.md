@@ -49,3 +49,13 @@ The final transformed dataset powers an interactive Looker Studio dashboard trac
 **[View the Live Looker Studio Report Here](https://datastudio.google.com/reporting/6bcff2dd-8f36-40d3-ad01-0a512c642490)**
 
 ---
+
+## Quick Start & Local Setup
+
+1. **Clone the Repository:**
+   ```bash
+   git clone [https://github.com/tsabitulazmi/enterprise-data-pipeline.git](https://github.com/tsabitulazmi/enterprise_data_pipeline.git)
+   
+2. **Configure GCP Credentials:**
+   * Download your Google Cloud Service Account key JSON file and save it as `gcp_key.json` in the root directory.
+   * Update your BigQuery Project ID inside `dbt_project/profiles.yml` to point to your GCP project.
